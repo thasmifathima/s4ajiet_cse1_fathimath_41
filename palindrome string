@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String original = sc.nextLine();
+        
+        // Remove spaces and convert to lowercase for accurate checking
+        String cleanStr = original.replaceAll("\\s+", "").toLowerCase();
+        String reversed = "";
+
+        // Reverse the string
+        for (int i = cleanStr.length() - 1; i >= 0; i--) {
+            reversed += cleanStr.charAt(i);
+        }
+
+        // Comparison
+        if (cleanStr.equals(reversed)) {
+            System.out.println("\"" + original + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + original + "\" is not a palindrome.");
+        }
+        
+        sc.close();
+    }
+}
+output
+Enter a string: ava
+"ava" is a palindrome.

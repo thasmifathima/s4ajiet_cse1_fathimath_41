@@ -1,0 +1,45 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        
+    
+        Map<Character, Integer> charMap = new HashMap<>();
+
+        for (char c : input.toCharArray()) {
+            // Ignore spaces (optional)
+            if (c == ' ') continue; 
+            
+            charMap.put(c, charMap.getOrDefault(c, 0) + 1);
+        }
+
+        System.out.println("Duplicate characters in the string:");
+        boolean found = false;
+        
+        for (Map.Entry<Character, Integer> entry : charMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " : " + entry.getValue() + " times");
+                found = true;
+            }
+        }
+
+        if (!found) {
+            System.out.println("No duplicate characters found.");
+        }
+        
+        scanner.close();
+    }
+}
+output
+Enter a string: my name is thasmi
+Duplicate characters in the string:
+a : 2 times
+s : 2 times
+i : 2 times
+m : 3 times

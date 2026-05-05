@@ -1,0 +1,45 @@
+After JEE Mains, some students got admission into an engineering college. Now there is a class consisting of such n students, and the HOD came to say it is time to select the class monitor. But He never gets all of them at one time. So he brought a register, every time he gets someone with less rank than the previous time he cut the name and wrote the name of the student and the rank.
+For a given number of ranks he gets each time, you have to predict how many names are cut in the list.
+Constraints:
+Number of Visiting<=10^9
+ranks <=10000
+Input Format:
+Number of Visiting N in their first line
+N space separated ranks the HOD gets each time
+
+import java.util.*;
+
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner (System.in);
+        int cut=0;
+        System.out.println("Enter the size of array:");
+        int n=sc.nextInt();
+        int [] arr = new int[n];
+        System.out.println("Number of Visiting N in their first line");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int large=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<large){
+                large=arr[i];
+                cut++;
+            }
+        }
+        System.out.println("Number of ranks cut in the lis:"+cut);
+    }
+}
+output
+Enter the size of array:
+6
+Number of Visiting N in their first line
+4
+3
+7
+2
+6
+1
+Number of ranks cut in the lis:3

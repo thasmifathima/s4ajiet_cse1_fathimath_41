@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter a string with spaces: ");
+        String input = scanner.nextLine();
+        
+        // \\s is a regex that matches all whitespace (spaces, tabs, newlines)
+        String result = input.replaceAll("\\s", "");
+        
+        System.out.println("String after removing spaces: " + result);
+        
+        scanner.close();
+    }
+}
+output
+Enter a string with spaces: i l o v e m a n g o e s
+String after removing spaces: ilovemangoes

@@ -12,3 +12,23 @@ class Main{
 }
 output
 ai:[2, 20]
+
+import java.util.HashSet;
+class Main{
+    public static void main(String[] args) {
+        HashSet<Integer> ai=new HashSet< >();
+        ai.add(10);
+        ai.add(20);
+        ai.add(10);
+        ai.add(40);
+        System.out.println("Contain thasmi:"+ai.contains("thasmi"));
+        System.out.println("Contain 20:"+ai.contains(20));
+        System.out.println("ai:"+ai);
+        System.out.println("size:"+ai.size());
+    }
+}
+output
+Contain thasmi:false
+Contain 20:true
+ai:[20, 40, 10]
+size:3

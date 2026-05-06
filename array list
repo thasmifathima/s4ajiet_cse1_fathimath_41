@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+ class main{
+    public static void main(String[] args)
+    {
+        ArrayList <String> List=new ArrayList<>();
+        List.add("java");
+        List.add("python");
+        List.add("java");
+        List.add(0,"thasmi");
+        List.add(1,"DBMS");
+        System.out.println(List);
+        System.out.println(List.get(0));
+    }
+}
+output
+[thasmi, DBMS, java, python, java]
+thasmi

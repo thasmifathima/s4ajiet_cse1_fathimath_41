@@ -10,8 +10,10 @@ import java.util.ArrayList;
         List.add(1,"DBMS");
         System.out.println(List);
         System.out.println(List.get(0));
+        System.out.println("size:"+List.size());
     }
 }
 output
 [thasmi, DBMS, java, python, java]
 thasmi
+size:5

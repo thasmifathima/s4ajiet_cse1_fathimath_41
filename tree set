@@ -1,0 +1,15 @@
+import java.util.TreeSet;
+class Main{
+    public static void main(String[] args) {
+        TreeSet<Integer> ai=new TreeSet< >();
+        ai.add(10);
+        ai.add(20);
+        ai.add(10);
+        ai.add(40);
+       
+        System.out.println("ai:"+ai);
+        ;
+    }
+}
+output
+ai:[10, 20, 40]

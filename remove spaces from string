@@ -7,7 +7,7 @@ class Main {
         System.out.print("Enter a string with spaces: ");
         String input = scanner.nextLine();
         
-        // \\s is a regex that matches all whitespace (spaces, tabs, newlines)
+     
         String result = input.replaceAll("\\s", "");
         
         System.out.println("String after removing spaces: " + result);
@@ -18,3 +18,25 @@ class Main {
 output
 Enter a string with spaces: i l o v e m a n g o e s
 String after removing spaces: ilovemangoes
+import java.util.Scanner;
+public class RemoveSpaces {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string with spaces:");
+        String input = sc.nextLine();
+        StringBuilder k = new StringBuilder();
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (!Character.isWhitespace(ch)) {
+                k.append(ch);
+            }
+        }
+        String result = k.toString();
+        System.out.println("String after removing spaces: " + result);
+        sc.close();
+    }
+}
+output
+Enter a string with spaces:
+i love my country
+String after removing spaces: ilovemycountry

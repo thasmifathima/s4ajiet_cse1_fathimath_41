@@ -1,0 +1,14 @@
+import java.util.HashSet;
+
+class Main{
+    public static void main(String[] args) {
+        HashSet <Integer>ai=new HashSet< >();
+        ai.add(2);
+        ai.add(20);
+        ai.add(2);
+    
+        System.out.println("ai:"+ai);
+    }
+}
+output
+ai:[2, 20]
